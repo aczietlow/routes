@@ -52,3 +52,4 @@ Ref:
 https://github.com/palantirnet/slides-d8-mod-dev.git
 https://www.drupal.org/docs/8/converting-drupal-7-modules-to-drupal-8/d7-to-d8-upgrade-tutorial-convert-hook_menu-and-hook
 http://knpuniversity.com/screencast/drupal8-under-the-hood/debugging#play
+https://slides.com/techsoldaten
