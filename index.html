@@ -73,6 +73,7 @@
       <p>Chris Zietlow \ <a href="https://twitter.com/aczietlow">@aczietlow</a></p>
     </section>
 
+    <!-- Slide 1 -->
     <section>
       <section>
         <h2>Creating pages</h2>
@@ -85,7 +86,29 @@
         </ul>
       </section>
       <section>
-        <h2>Creating a simple route</h2>
+        <h2>Drupal 7</h2>
+        <h4>hook_menu()</h4>
+        <pre><code data-trim contenteditable>
+/**
+ * Implements hook_menu().
+ */
+function sample_recipes_menu() {
+  $items = array();
+
+  $items['muffin'] = [
+    'title' => 'Muffin',
+    'description' => 'It puts the muffins in its mouth',
+    'access arguments' => ['access content'],
+    'page callback' => 'sample_recipes_muffin',
+  ];
+
+  return $items;
+}
+</code></pre>
+      </section>
+      <section>
+        <h2>Drupal 8</h2>
+        <h4>Creating a simple route</h4>
         <p>Need to define route, and let Drupal know about it</p>
         <p><pre>custom_module.routing.yml</pre></p>
         <pre><code data-trim contenteditable>
@@ -98,7 +121,20 @@ sample_recipes:
 </code></pre>
       </section>
       <section>
-        <h2>Creating a simple controller</h2>
+        <h2>Drupal 7</h2>
+        <h4>page_callback</h4>
+        <pre><code data-trim contenteditable>
+/**
+ * Implements hook_menu().
+ */
+function sample_recipes_muffin() {
+  return 'Muffins!';
+}
+</code></pre>
+      </section>
+      <section>
+        <h2>Drupal 8</h2>
+        <h4>Creating a simple controller</h4>
         <p><pre>modules/custom/sample_recipes/src/Controller/RecipeController.php</pre></p>
         <pre><code data-trim contenteditable>
 namespace Drupal\sample_recipes\Controller;
@@ -121,6 +157,13 @@ class RecipeController {
           <li><pre>drupal route:rebuild</pre></li>
         </ul>
       </section>
+    </section>
+
+    <!-- Slide 2 -->
+    <section>
+
+
+
     </section>
 
 
